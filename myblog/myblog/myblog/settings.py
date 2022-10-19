@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CSRF_TRUSTED_ORIGINS = ['https://*8000-mattheuskasa-djangoblog-g1esyt13fjo.ws-eu67.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://*8000-mattheuskas-mydjangoblo-88lwkm3vpcq.ws-eu71.gitpod.io']
 
 # Application definition
 
