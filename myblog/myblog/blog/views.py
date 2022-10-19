@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponse
 from django.views import generic
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, LoginForm
+from django.contrib.auth import authenticate, login
 
 
 # Create your views here.
@@ -47,6 +48,28 @@ class PostList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 3
 
+
 class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post_detail.html'
+
+
+def user_login(request):
+    if request.method == "POST":
+        form = LoginForm(request.POST)
+
+        if form.is_valid():
+            cd = form.cleaned_data
+            user = authenticate(request, username=cd['username'], password=cd['password'])
+
+            if user is not None:
+                login(request, user)
+                return HttpResponse("You are authenticated")
+
+            else:
+                return HttpResponse("Invalid Login")
+
+    else:
+        form = LoginForm()
+
+    return render(request, 'account/login.html', {'form': form})
