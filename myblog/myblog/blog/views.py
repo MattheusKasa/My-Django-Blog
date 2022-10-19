@@ -40,3 +40,12 @@ def post_detail(request, slug):
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
+
+
+class PostList(generic.ListView):
+    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    template_name = 'index.html'
+
+class PostDetail(generic.DetailView):
+    model = Post
+    template_name = 'post_detail.html'
