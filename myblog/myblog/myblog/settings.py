@@ -36,13 +36,13 @@ CSRF_TRUSTED_ORIGINS = ['https://*8000-mattheuskas-mydjangoblo-81qfz9rhi2j.ws-eu
 # Application definition
 
 INSTALLED_APPS = [
+    'blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
     'crispy_forms',
     'bootstrap4',
     'crispy_bootstrap5'
@@ -120,6 +120,10 @@ USE_I18N = True
 
 USE_TZ = True
 
+
+LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
