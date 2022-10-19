@@ -10,7 +10,6 @@
     .head_text {
         color: white;
     }
-
     .card {
         box-shadow: 0 16px 48px #E3E7EB;
     }
@@ -23,7 +22,7 @@
             <div class=" col-md-8 col-md-10 mx-auto">
                 <div class="site-heading">
                     <h3 class=" site-heading my-4 mt-3 text-white"> Welcome to my Blog! </h3>
-                    <p class="text-light">hehe
+                    <p class="text-light">
                     </p>
                 </div>
             </div>
@@ -51,10 +50,10 @@
   <nav aria-label="Page navigation conatiner"></nav>
   <ul class="pagination justify-content-center">
     {% if page_obj.has_previous %}
-    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; Prev </a></li>
     {% endif %}
     {% if page_obj.has_next %}
-    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> Next &raquo;</a></li>
 
     {% endif %}
   </ul>
