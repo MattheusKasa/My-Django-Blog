@@ -43,15 +43,22 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-5">
+                        {% if request.user.is_authenticated %}
+                            <a class="nav-link disabled">Welcome, {{request.user.username}}</a>
+                          </li>
+                          <li class="nav-item text-black">
+                            <a class="nav-link text-black font-weight-bold" href="{% url 'logout' %}">Logout</a>
+                        </li>
                         <li class="nav-item text-black">
+                            <a class="nav-link text-black font-weight-bold" href="#">change password</a>
+                        </li>
+                          {% else %}
+                          <li class="nav-item text-black">
                             <a class="nav-link text-black font-weight-bold" href="{% url 'login' %}">Login</a>
                         </li>
-                        <li class="nav-item text-black">
-                            <a class="nav-link text-black font-weight-bold" href="#">dasdas</a>
-                        </li>
-                        <li class="nav-item text-black">
-                            <a class="nav-link text-black font-weight-bold" href="#">asdas</a>
-                        </li>
+                          {% endif %}
+
                     </ul>
                 </div>
             </div>
