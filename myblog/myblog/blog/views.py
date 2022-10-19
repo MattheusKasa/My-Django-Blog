@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, HttpResponse
 from django.views import generic
 from .models import Post
-from .forms import CommentForm, LoginForm
+from .forms import CommentForm, LoginForm, UserRegistration
 from django.contrib.auth import authenticate, login
 
 
@@ -73,3 +73,22 @@ def user_login(request):
         form = LoginForm()
 
     return render(request, 'account/login.html', {'form': form})
+
+
+def register(request):
+    if request.method == "POST":
+        user_form = UserRegistration(request.POST)
+
+        if user_form.is_valid():
+
+            new_user = user_form.save(commit=False)
+
+            new_user.set_password(user_form.cleaned_data['password'])
+
+            new_user.save()
+            return render(request, 'account/register_done.html', {'user_form': user_form})
+
+    else:
+        user_form = UserRegistration()
+
+    return render(request, 'account/register.html', {'user_form': user_form})
