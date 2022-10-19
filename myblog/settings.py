@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 
 CSRF_TRUSTED_ORIGINS = ['https://*8000-mattheuskas-mydjangoblo-88lwkm3vpcq.ws-eu71.gitpod.io']
 CSRF_TRUSTED_ORIGINS = ['https://*8000-mattheuskas-mydjangoblo-svnd1gwgdo0.ws-eu71.gitpod.io']
-CSRF_TRUSTED_ORIGINS = ['https://*8000-mattheuskas-mydjangoblo-fg12ducro02.ws-eu71.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://*8000-mattheuskas-mydjangoblo-ik1l06g1yg5.ws-eu71.gitpod.io']
 
 # Application definition
 
