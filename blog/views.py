@@ -18,6 +18,7 @@ class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post_detail.html'
 
+
 @login_required
 def post_detail(request, slug):
     template_name = 'post_detail.html'
