@@ -76,6 +76,15 @@ Options for the user changes depending on if user is logged in or not
     - Change Password
     - See Posts
     - Comment Posts
+- Admins are able to:
+    - Create Posts
+    - Delete Posts
+    - Create Comments
+    - Delete Comments
+    - Edit Comments
+    - Create Users
+    - Delete Users
+    - Edit Users Info
 
 <p>&nbsp;</p>
 
