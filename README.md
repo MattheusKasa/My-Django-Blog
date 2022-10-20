@@ -55,6 +55,7 @@ Font used on the site are the google font [Roboto](https://fonts.google.com/spec
 
 [Balsamic Wireframes](https://balsamiq.com/)
     - I used this to create all the wireframes for this project
+    - They can be found using this [link](https://github.com/MattheusKasa/My-Django-Blog/tree/master/wireframes)
 
 <p>&nbsp;</p>
 
