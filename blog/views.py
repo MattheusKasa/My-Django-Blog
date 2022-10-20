@@ -3,6 +3,7 @@ from django.views import generic
 from .models import Post
 from .forms import CommentForm, LoginForm, UserRegistration
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -17,7 +18,7 @@ class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post_detail.html'
 
-
+@login_required
 def post_detail(request, slug):
     template_name = 'post_detail.html'
     post = get_object_or_404(Post, slug=slug)
