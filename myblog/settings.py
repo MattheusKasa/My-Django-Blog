@@ -25,10 +25,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
 SECRET_KEY = 'django-insecure-82l6vu0ts)miruy7!^#of&rip+-ggf03apqf+gu38=5aj@z2u#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['my-django-blog-mattheus.herokuapp.com']
+ALLOWED_HOSTS = ['my-django-blog-mattheus.herokuapp.com', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*', "https://8000-mattheuskas-mydjangoblo-ph686qay1w6.ws-eu90.gitpod.io"]
 
 # Application definition
 
