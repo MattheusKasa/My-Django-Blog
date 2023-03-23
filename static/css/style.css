@@ -1,11 +1,38 @@
+body {
+    min-height: 100vh;
+}
+
+
 footer {
-    color: red;
-    padding: 60px;
-}
-
-travel-icon {
     color: black;
-    font-size: 22px;
-    size: 225rem;
+    background-color: #fdfdfd;
+    padding: 20px;
+    margin-top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
 }
 
+.travel-icon {
+    max-height: 100px;
+    max-width: 100px;
+    margin: 0 auto auto 0;
+    padding: 0;
+    height: 100px;
+    width: 100px;
+}
+
+i {
+    color: #E9AE93;
+    padding: 5px;
+    padding-top: 15px;
+}
+
+i:hover {
+    color: black;
+}
+
+.hej {
+    padding-top: 15px;
+}
