@@ -3,11 +3,9 @@ footer {
     padding: 60px;
 }
 
-.travel-icon {
+travel-icon {
     color: black;
     font-size: 22px;
+    size: 225rem;
 }
 
-* {
-    background-color: red;
-}
