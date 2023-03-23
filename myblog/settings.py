@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['my-django-blog-mattheus.herokuapp.com', 'localhost', 'https://8000-mattheuskas-mydjangoblo-aswga9949s5.ws-eu90.gitpod.io/']
 
-CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*', "https://8000-mattheuskas-mydjangoblo-aswga9949s5.ws-eu90.gitpod.io/", "https://8000-mattheuskas-mydjangoblo-y0epkr3xfdx.ws-eu90.gitpod.io/*"]
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*', "https://8000-mattheuskas-mydjangoblo-aswga9949s5.ws-eu90.gitpod.io/", "https://8000-mattheuskas-mydjangoblo-lizdy13timr.ws-eu92.gitpod.io/*"]
 
 # Application definition
 
@@ -126,7 +126,7 @@ LOGOUT_URL = 'logout'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
