@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['my-django-blog-mattheus.herokuapp.com', 'localhost', 'https://8000-mattheuskas-mydjangoblo-aswga9949s5.ws-eu90.gitpod.io/']
 
-CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*', "https://8000-mattheuskas-mydjangoblo-aswga9949s5.ws-eu90.gitpod.io/", "https://8000-mattheuskas-mydjangoblo-lizdy13timr.ws-eu92.gitpod.io/*"]
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*', "https://8000-mattheuskas-mydjangoblo-aswga9949s5.ws-eu90.gitpod.io/", "https://8000-mattheuskas-mydjangoblo-cyjrbukujzs.ws-eu92.gitpod.io/*"]
 
 # Application definition
 

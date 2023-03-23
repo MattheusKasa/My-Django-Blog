@@ -2,3 +2,12 @@ footer {
     color: red;
     padding: 60px;
 }
+
+.travel-icon {
+    color: black;
+    font-size: 22px;
+}
+
+* {
+    background-color: red;
+}

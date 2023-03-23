@@ -1,14 +1,16 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 
     <head>
-        <title>Mattheus Blog</title>
+        <title>Mattheus Travels</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
         <meta name="google" content="notranslate">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous">
-        <link rel="stylesheet" href="{% load static % 'css/style.css'}">
+            <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/style.css' %}">
     </head>
 
     <body>
@@ -29,7 +31,9 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'home' %}">Mattheus Blog</a>
+                <a class="navbar-brand" href="{% url 'home' %}"> <img alt="image of earth with a hot air baloon"
+                    class="travel-icon"
+                    src="https://res.cloudinary.com/dsa3o1dbv/image/upload/v1679577195/Mattheus_Travels-removebg-preview_rpzw86.png"> Mattheus Travels</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -63,8 +67,8 @@
 
         {% endblock content %}
 
-        <footer class="text-center mb-4 mt-4" style="background-color: #93B9C1">
-            <div class="container px-2 px-lg-5 ">Copyright &copy; Mattheus Kasa, Code Institute Student 2022</div>
+        <footer class="text-center mb-4 mt-4" style="background-color: #79878a">
+            <div class="container px-2 px-lg-5 ">Copyright &copy; Mattheus Kasa</div>
     
             <!--Social media links  -->
             <div>
