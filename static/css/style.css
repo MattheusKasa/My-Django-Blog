@@ -21,6 +21,7 @@ footer {
     padding: 0;
     height: 100px;
     width: 100px;
+    font-weight: bold;
 }
 
 i {
@@ -33,6 +34,31 @@ i:hover {
     color: black;
 }
 
-.hej {
+.footer-social {
     padding-top: 15px;
+}
+
+.site-heading {
+    color: #E9AE93;
+}
+
+.welcomeuser {
+    color: red;
+}
+
+.navbar {
+    color: red;
+}
+
+li {
+    color: black;
+    font-weight: bold;
+}
+
+a {
+    color: #E9AE93;
+}
+
+a:hover {
+    color: #040404;
 }
