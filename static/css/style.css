@@ -1,7 +1,9 @@
 body {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    background-color: #fdfdfd;
     min-height: 100vh;
 }
-
 
 footer {
     color: black;
@@ -38,16 +40,16 @@ i:hover {
     padding-top: 15px;
 }
 
-.site-heading {
-    color: #E9AE93;
+.heading-text {
+    color: #040404;
+    font-size: 45px;
+    text-align: center;
 }
 
-.welcomeuser {
-    color: red;
-}
-
-.navbar {
-    color: red;
+.heading-text-alt {
+    text-align: center;
+    color: #040404;
+    font-size: 22px;
 }
 
 li {
@@ -74,3 +76,34 @@ a:hover {
     color: #E9AE93;
     background-color: #040404;
 }
+
+.masthead {
+    background-color: #E9AE93;
+    box-shadow: 0 16px 48px #E3E7EB;
+    height: auto;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.page-link {
+    color: #040404;
+    background-color: #E9AE93;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.page-link:hover {
+    color: #E9AE93;
+    background-color: #040404;
+}
+
+.navbar-brand {
+    color: #E9AE93;
+   font-weight: bold;
+   font-size: 42px;
+}
+
+.card {
+    box-shadow: 0 16px 48px #E3E7EB;
+}
+
