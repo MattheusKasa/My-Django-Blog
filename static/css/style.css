@@ -6,7 +6,7 @@ body {
 }
 
 footer {
-    color: black;
+    color: #040404;
     background-color: #fdfdfd;
     padding: 20px;
     margin-top: auto;
@@ -33,7 +33,7 @@ i {
 }
 
 i:hover {
-    color: black;
+    color: #040404;
 }
 
 .footer-social {
@@ -41,19 +41,19 @@ i:hover {
 }
 
 .heading-text {
-    color: #040404;
+    color: #fdfdfd;
     font-size: 45px;
     text-align: center;
 }
 
 .heading-text-alt {
     text-align: center;
-    color: #040404;
+    color: #fdfdfd;
     font-size: 22px;
 }
 
 li {
-    color: black;
+    color: #040404;
     font-weight: bold;
 }
 
@@ -66,15 +66,15 @@ a:hover {
 }
 
 .btn-primary {
-    color: #040404;
+    color: #fdfdfd;
     background-color: #E9AE93;
     text-decoration: none;
     font-weight: bold;
 }
 
 .btn-primary:hover {
-    color: #E9AE93;
-    background-color: #040404;
+    color: #040404;
+    background-color: #E9AE93;
 }
 
 .masthead {
@@ -86,15 +86,15 @@ a:hover {
 }
 
 .page-link {
-    color: #040404;
+    color: #fdfdfd;
     background-color: #E9AE93;
     text-decoration: none;
     font-weight: bold;
 }
 
 .page-link:hover {
-    color: #E9AE93;
-    background-color: #040404;
+    color: #040404;
+    background-color: #E9AE93;
 }
 
 .navbar-brand {
@@ -107,3 +107,6 @@ a:hover {
     box-shadow: 0 16px 48px #E3E7EB;
 }
 
+.navbar {
+    background-color: #fdfdfd;
+}
