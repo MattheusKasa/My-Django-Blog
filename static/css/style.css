@@ -70,6 +70,7 @@ a:hover {
     background-color: #E9AE93;
     text-decoration: none;
     font-weight: bold;
+    border: none;
 }
 
 .btn-primary:hover {
