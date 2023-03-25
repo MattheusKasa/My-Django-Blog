@@ -1,25 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
 
 {% block title %}{% endblock %}
 
 
-<style>
-    body {
-        font-family: "Roboto", sans-serif;
-        font-size: 22px;
-        background-color: #fdfdfd;
-    }
 
-    .head_text {
-        color: white;
-    }
-
-    .card {
-        box-shadow: 0 16px 48px #E3E7EB;
-    }
-</style>
 
 <div class="container mt-4 register_style">
     <h3>Register an account</h3>
@@ -27,7 +14,7 @@
         {{user_form | crispy}}
         {% csrf_token %}
 
-        <input type="submit" value="Create Account", class="btn btn-success">
+        <input type="submit" value="Create Account", class="btn btn-primary">
 
     </form>
 </div>
