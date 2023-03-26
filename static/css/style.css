@@ -45,11 +45,13 @@ i:hover {
     color: #fdfdfd;
     font-size: 45px;
     text-align: center;
+    font-family: "Alkatra";
 }
 
 .heading-text-alt {
     text-align: center;
     color: #fdfdfd;
+    font-family: "Alkatra";
     font-size: 22px;
 }
 
@@ -101,8 +103,9 @@ a:hover {
 
 .navbar-brand {
     color: #E9AE93;
-   font-weight: bold;
-   font-size: 42px;
+    font-weight: bold;
+    font-size: 42px;
+    font-family: "Alkatra";
 }
 
 .card {
