@@ -1,22 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<style>
-    body {
-        font-family: "Roboto", sans-serif;
-        font-size: 22px;
-        background-color: #fdfdfd;
-    }
 
-    .head_text {
-        color: white;
-    }
-
-    .card {
-        box-shadow: 0 16px 48px #E3E7EB;
-    }
-</style>
-
-<div class="container mt-4">
+<div class="container mt-4 text-center">
     <p>You have been logged out, You can <a href="{% url 'login' %}">Login again</a></p>
 </div>
 

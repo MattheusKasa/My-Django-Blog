@@ -5,23 +5,8 @@
 {% block title %}{% endblock %}
 
 
-<style>
-    body {
-        font-family: "Roboto", sans-serif;
-        font-size: 22px;
-        background-color: #fdfdfd;
-    }
 
-    .head_text {
-        color: white;
-    }
-
-    .card {
-        box-shadow: 0 16px 48px #E3E7EB;
-    }
-</style>
-
-<div class="container">
+<div class="container text-center">
     <h3>Welcome, {{new_user.username}}</h3>
     <p>Your account has been created, you can <a href="{% url 'login' %}">Login Here</a></p>
 
