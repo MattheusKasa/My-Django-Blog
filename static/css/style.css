@@ -132,3 +132,13 @@ a:hover {
 #dropdownMenuLink:hover {
     color: #040404;
 }
+
+.post-title {
+    color: red;
+}
+
+.card-title {
+    color: #E9AE93;
+    font-weight: bold;
+    font-family: "Alkatra";
+}
