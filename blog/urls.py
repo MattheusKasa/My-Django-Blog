@@ -2,6 +2,8 @@ from . import views
 from django.urls import path
 from .views import user_login, register
 from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
@@ -13,3 +15,6 @@ urlpatterns = [
     path('password-change/done', PasswordChangeDoneView.as_view(), name = 'password_change_done'),
     path('<slug:slug>/', views.post_detail, name='post_detail'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
