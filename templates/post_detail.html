@@ -18,19 +18,27 @@
       <div class="card-body">
         <!-- comments -->
         <h2 class="card-text-comments">{{ comments.count }} comments</h2>
+
+
         {% for comment in comments %}
-        <div>
-          <strong>{{ comment.name }}</strong>
-          <p>{{ comment.body }}</p>
+        <div class="row mb-3 border p-3">
+          <div class="col-8">
+            <strong>{{ comment.name }}</strong>
+            <p>{{ comment.body }}</p>
+          </div>
           {% if user.is_authenticated and user.username == comment.name %}
-            <a href="{% url 'edit_comment' comment_id=comment.id %}">Edit</a>
-            <form method="POST" action="{% url 'comment_delete' slug=post.slug comment_id=comment.id %}">
-              {% csrf_token %}
-              <button type="submit" class="btn btn-danger  btn-lg">Delete</button>
-            </form>
+            <div class="col-4 text-right">
+              <a href="{% url 'edit_comment' comment_id=comment.id %}" class="btn btn-primary btn-sm">Edit</a>
+              <form method="POST" action="{% url 'comment_delete' slug=post.slug comment_id=comment.id %}" class="d-inline">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+              </form>
+            </div>
           {% endif %}
         </div>
       {% endfor %}
+      
+
 
       </div>
     </div>
