@@ -5,33 +5,13 @@
 
 {% block title %}{% endblock %}
 
-
-
-
-<div class="container mt-4 register_style text-center">
+<div class="container mt-4 text-center">
     <h3>Register an account</h3>
     <form action="" method="post" novalidate>
         {{user_form | crispy}}
         {% csrf_token %}
-
         <input type="submit" value="Create Account", class="btn btn-primary">
-
     </form>
 </div>
 
-
-{% if is_paginated %}
-  <nav aria-label="Page navigation conatiner"></nav>
-  <ul class="pagination justify-content-center">
-    {% if page_obj.has_previous %}
-    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-    {% endif %}
-    {% if page_obj.has_next %}
-    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
-    {% endif %}
-  </ul>
-  </nav>
-</div>
-{% endif %}
 {%endblock%}
