@@ -115,3 +115,23 @@ def comment_delete(request, slug, comment_id):
             return redirect('post_detail', slug=post.slug)
     
     return HttpResponse(status=403)
+
+
+
+
+@login_required
+def edit_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    
+    if request.user.username != comment.name:
+        return HttpResponse(status=403)
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return redirect('post_detail', slug=comment.post.slug)
+    else:
+        form = CommentForm(instance=comment)
+
+    return render(request, 'edit_comment.html', {'form': form, 'comment': comment})

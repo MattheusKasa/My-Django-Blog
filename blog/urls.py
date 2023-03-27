@@ -14,7 +14,8 @@ urlpatterns = [
     path('password-change/', PasswordChangeView.as_view(), name='password-change'),
     path('password-change/done/', PasswordChangeDoneView.as_view(), name='password_change_done'),
     path('<slug:slug>/', views.post_detail, name='post_detail'),
-    path('post/<slug:slug>/comment/<int:comment_id>/delete/', views.comment_delete, name='comment_delete')
+    path('post/<slug:slug>/comment/<int:comment_id>/delete/', views.comment_delete, name='comment_delete'),
+    path('comment/<int:comment_id>/edit/', views.edit_comment, name='edit_comment'),
 ]
 
 if settings.DEBUG:
