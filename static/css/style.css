@@ -127,6 +127,7 @@ a:hover {
     color: #fdfdfd;
     background-color: #E9AE93;
     border: none;
+    font-size: large;
 }
 
 #dropdownMenuLink:hover {
@@ -160,3 +161,4 @@ a:hover {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
