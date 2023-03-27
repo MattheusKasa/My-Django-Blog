@@ -20,7 +20,7 @@
         </div>
     </div>
 </header>
-<div class="container">
+<div class="container text-center">
     <div class="row">
 
         <div class="col-md-8 mt-3 left">
@@ -38,7 +38,7 @@
     </div>
 </div>
 {% if is_paginated %}
-  <nav aria-label="Page navigation conatiner"></nav>
+  <nav aria-label="Page navigation container"></nav>
   <ul class="pagination justify-content-center">
     {% if page_obj.has_previous %}
     <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; Prev </a></li>
