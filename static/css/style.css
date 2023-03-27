@@ -122,3 +122,13 @@ a:hover {
     margin-top: 10px;
     margin-bottom: 30px;
 }
+
+#dropdownMenuLink {
+    color: #fdfdfd;
+    background-color: #E9AE93;
+    border: none;
+}
+
+#dropdownMenuLink:hover {
+    color: #040404;
+}
