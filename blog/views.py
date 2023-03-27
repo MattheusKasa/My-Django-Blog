@@ -1,9 +1,10 @@
-from django.shortcuts import render, get_object_or_404, HttpResponse
+from django.shortcuts import render, get_object_or_404, HttpResponse, redirect
 from django.views import generic
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm, LoginForm, UserRegistration
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 
 
 # Create your views here.
@@ -13,6 +14,10 @@ def profile(request):
     user = request.user
     context = {'user': user}
     return render(request, 'profile.html', context)
+
+
+
+
 
 
 
@@ -97,3 +102,16 @@ def register(request):
         user_form = UserRegistration()
 
     return render(request, 'account/register.html', {'user_form': user_form})
+
+
+@login_required
+def comment_delete(request, slug, comment_id):
+    post = get_object_or_404(Post, slug=slug)
+    comment = get_object_or_404(Comment, id=comment_id, post=post)
+    
+    if request.method == 'POST':
+        if request.user.username == comment.name:  # change this line
+            comment.delete()
+            return redirect('post_detail', slug=post.slug)
+    
+    return HttpResponse(status=403)
