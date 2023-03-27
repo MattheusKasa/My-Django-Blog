@@ -8,6 +8,7 @@ urlpatterns = [
     path('login/', LoginView.as_view(), name = 'login'),
     path('logout/', LogoutView.as_view(), name = 'logout'),
     path('register/', register, name = 'register'),
+    path('profile/', views.profile, name='profile'),
     path('password-change/', PasswordChangeView.as_view(), name = 'password-change'),
     path('password-change/done', PasswordChangeDoneView.as_view(), name = 'password_change_done'),
     path('<slug:slug>/', views.post_detail, name='post_detail'),

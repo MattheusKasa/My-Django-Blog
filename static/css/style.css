@@ -115,3 +115,10 @@ a:hover {
 .navbar {
     background-color: #fdfdfd;
 }
+
+.profile-text {
+    color: #E9AE93;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}

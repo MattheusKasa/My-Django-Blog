@@ -8,6 +8,13 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+@login_required
+def profile(request):
+    user = request.user
+    context = {'user': user}
+    return render(request, 'profile.html', context)
+
+
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
