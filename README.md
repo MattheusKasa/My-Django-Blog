@@ -1,9 +1,10 @@
-# [MATTHEUS BLOG](https://my-django-blog-mattheus.herokuapp.com/)
+# [Mattheus Travels](https://my-django-blog-mattheus.herokuapp.com/)
 
-## Welcome
+## Welcome to Mattheus Travels!
 
-### Mattheus Blog is a website for viewing and commenting different blogposts.
+### Here you can join me on my adventures around the world, as I share my experiences through stunning images and short snippets of my travels.
 
+Here's a link to the live website: https://my-django-blog-mattheus.herokuapp.com/
 
 ---
 ## Table of Contents
@@ -29,7 +30,7 @@
 ---
 ## UX
 
-This is my fourth project in my journey to becoming a software developer. I have chosen to create 'Mattheus Blog", a blog where you can read interesting posts.
+This is my fourth project in my journey to becoming a software developer. I have chosen to create 'Mattheus Travels", a blog where you can see pictures from places i have been, and read about my experience at theses places.
 
 ## User Stories
 
