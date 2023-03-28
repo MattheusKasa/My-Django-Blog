@@ -7,6 +7,7 @@
         <p>Username: {{ user.username }}</p>
         <p>First name: {{ user.first_name }}</p>
         <p>Email: {{ user.email }}</p>
+        <a href="{% url 'delete_profile' %}">Delete Profile</a>
 </div>
 
 {% endblock %}

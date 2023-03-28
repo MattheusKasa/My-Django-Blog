@@ -6,6 +6,7 @@ from .forms import CommentForm, LoginForm, UserRegistration
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
+from django.contrib import messages
 
 
 
@@ -164,3 +165,14 @@ def is_liked(request, post_id):
     if request.user.is_authenticated:
         liked = post.likes.filter(id=request.user.id).exists()
     return JsonResponse({"liked": liked})
+
+
+@login_required
+def delete_profile(request):
+    if request.method == 'POST':
+        user = request.user
+        user.delete()
+        messages.success(request, 'Your account has been deleted.')
+        return redirect('home')
+    else:
+        return render(request, 'delete_profile.html')
