@@ -1,4 +1,4 @@
-# [Mattheus Travels](https://my-django-blog-mattheus.herokuapp.com/)
+# Mattheus Travels
 
 ## Welcome to Mattheus Travels!
 
@@ -10,7 +10,6 @@ Here's a link to the live website: https://my-django-blog-mattheus.herokuapp.com
 ## Table of Contents
 1. [**UX**](#user-experience)
     - [**User Stories**](#user-stories)
-    - [**Design**](#design)
     - [**Typography/Color Scheme**](#typographycolor-scheme)
     - [**Wireframes**](#wireframes)
 
@@ -54,7 +53,7 @@ As a site user i want to be able to:
 
 #### Typography/Color Scheme
 
-Font used on the site are the google font [Roboto](https://fonts.google.com/specimen/Roboto). I chose to keep the color scheme light and easy with different shades of blue for the banners and buttons. The buttons for user management i chose to style grey.
+Fonts used on the site are the google fonts [Roboto](https://fonts.google.com/specimen/Roboto) and [Alkatra](https://fonts.google.com/specimen/Alkatra?query=Alkatra). I choose to keep the color scheme light and easy with a mix of white, lightgrey, black and peach.
 
 <p>&nbsp;</p>
 
