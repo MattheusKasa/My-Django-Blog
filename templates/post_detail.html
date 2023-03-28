@@ -15,14 +15,11 @@
         <span id="like-count">{{ post.likes.count }}</span> Likes
       </div>
     </div>
-
-
+    
     <div class="col-md-8 card mb-4  mt-3 ">
       <div class="card-body">
         <!-- comments -->
         <h2 class="card-text-comments">{{ comments.count }} comments</h2>
-
-
         {% for comment in comments %}
         <div class="row mb-3 border p-3">
           <div class="col-8">
@@ -40,29 +37,24 @@
           {% endif %}
         </div>
       {% endfor %}
-      
-
-
       </div>
     </div>
+
     <div class="col-md-8 card mb-4  mt-3 ">
       <div class="card-body">
-
-
         <h3>Leave a comment</h3>
         <form method="post">
           {{ comment_form | crispy }}
           {% csrf_token %}
           <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
         </form>
-
       </div>
     </div>
   </div>
 </div>
 
-
 {% block extra_js %}
+
 <script>
  document.addEventListener('DOMContentLoaded', function () {
   const postId = {{ post.id }};
@@ -98,10 +90,6 @@
     });
   });
 });
-
-
 </script>
 {% endblock %}
-
-
 {% endblock content %}

@@ -15,28 +15,23 @@
         <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/style.css' %}">
         <link rel="shortcut icon" href="{% static 'mattheus-travels-favicon.png' %}"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-ogC1hDElT1r7zIy8WYZDEmOWgkxhNME+r7g9zE9zdH7Ji0MmUz7wJ0WlCoqz0Bad" crossorigin="anonymous" />
-
-        
-
     </head>
 
     <body>
         <nav class="navbar navbar-expand-md" id="mainNav">
             <div class="container-fluid">
-                
                 <div class="container">
                     <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
                         <div class="col-md-3">
                             <img alt="image of earth with a hot air baloon"
-                                class="travel-icon mr-2"
-                                src="https://res.cloudinary.com/dsa3o1dbv/image/upload/v1679577195/Mattheus_Travels-removebg-preview_rpzw86.png">
+                            class="travel-icon mr-2"
+                            src="https://res.cloudinary.com/dsa3o1dbv/image/upload/v1679577195/Mattheus_Travels-removebg-preview_rpzw86.png">
                         </div>
                         <div class="col-md-8">
                             <h1 class="navbar-text d-none d-lg-block">Mattheus Travels</h1>
                         </div>
                     </a>
                 </div>
-
 
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +40,6 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         {% if request.user.is_authenticated %}
-
                         <div class="dropdown show">
                             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Welcome {{request.user.username}}!
@@ -55,29 +49,25 @@
                                 <a class="nav-link text-black font-weight-bold" href="{% url 'password-change' %}">Change Password</a>
                                 <a class="nav-link text-black font-weight-bold" href="{% url 'logout' %}">Logout</a>
                             </div>
-                          </div>
-
+                        </div>
 
                         {% else %}
-                          <li class="nav-item text-black">
+                        <li class="nav-item text-black">
                             <a class="nav-link text-black font-weight-bold" href="{% url 'login' %}">Login</a>
                         </li>
                         <li class="nav-item text-black">
                             <a class="nav-link text-black font-weight-bold" href="{% url 'register' %}">Register</a>
                         </li>
-                          {% endif %}
-
+                        {% endif %}
                     </ul>
                 </div>
             </div>
         </nav>
         {% block content %}
-
         {% endblock content %}
 
         <footer class="text-center mb-4 mt-4">
             <div class="container px-2 px-lg-5 ">Follow me on Social Media</div>
-    
             <!--Social media links  -->
             <div class="footer-social">
                 <a href="https://twitter.com/?lang=en" class="me-4 text-reset" target="_blank" rel="noopener"
