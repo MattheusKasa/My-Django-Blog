@@ -22,11 +22,13 @@ Here's a link to the live website: https://my-django-blog-mattheus.herokuapp.com
     - [**Backend**](#backend)
     - [**Frontend**](#frontend)
 
-4. [**Compatability**](#compatibility)
+4. [**Testing**](*testing)
 
-5. [**Deployment**](#deployment)
+5. [**Compatability**](#compatibility)
 
-6. [**Credits**](#credits)
+6. [**Deployment**](#deployment)
+
+7. [**Credits**](#credits)
 ---
 ## UX
 
@@ -155,6 +157,10 @@ Users should be able to delete their accounts.
 
     <p>&nbsp;</p>
 
+---
+
+## Testing
+Testing and results can be found [here](testing.md)
 ---
 
 ## Compatibility

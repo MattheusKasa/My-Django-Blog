@@ -9,7 +9,6 @@ from django.urls import reverse
 from django.contrib import messages
 
 
-
 # Create your views here.
 
 @login_required
@@ -17,11 +16,6 @@ def profile(request):
     user = request.user
     context = {'user': user}
     return render(request, 'profile.html', context)
-
-
-
-
-
 
 
 class PostList(generic.ListView):
@@ -40,21 +34,22 @@ def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
     comments = post.comments.filter(active=True)
     new_comment = None
-    
+
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             new_comment = comment_form.save(commit=False)
             new_comment.post = post
-            new_comment.name = request.user.username # set the name field to the username of the logged-in user
+            new_comment.name = request.user.username
             new_comment.save()
     else:
         comment_form = CommentForm()
-        
+
     return render(request, template_name, {'post': post,
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
+
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
@@ -111,21 +106,19 @@ def register(request):
 def comment_delete(request, slug, comment_id):
     post = get_object_or_404(Post, slug=slug)
     comment = get_object_or_404(Comment, id=comment_id, post=post)
-    
+
     if request.method == 'POST':
         if request.user.username == comment.name:  # change this line
             comment.delete()
             return redirect('post_detail', slug=post.slug)
-    
+
     return HttpResponse(status=403)
-
-
 
 
 @login_required
 def edit_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
-    
+
     if request.user.username != comment.name:
         return HttpResponse(status=403)
 
@@ -138,7 +131,6 @@ def edit_comment(request, comment_id):
         form = CommentForm(instance=comment)
 
     return render(request, 'edit_comment.html', {'form': form, 'comment': comment})
-
 
 
 @login_required
@@ -158,6 +150,7 @@ def like_post(request, post_id):
     }
 
     return JsonResponse(response_data)
+
 
 def is_liked(request, post_id):
     post = get_object_or_404(Post, id=post_id)
