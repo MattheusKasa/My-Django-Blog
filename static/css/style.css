@@ -150,6 +150,12 @@ a:hover {
     font-family: "Alkatra";
 }
 
+.card-text-likes {
+    color: #E9AE93;
+    font-weight: bold;
+    font-family: "Alkatra";
+}
+
 .card-image-top {
     max-width: 100%;
     height: auto;
@@ -199,4 +205,9 @@ a:hover {
     color: red;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.no-hover {
+    text-decoration: none;
+    
 }
