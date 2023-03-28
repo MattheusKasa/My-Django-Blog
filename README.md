@@ -35,14 +35,34 @@ Those visiting Mattheus Travels are people who enjoy traveling or are interested
 
 ## User Stories
 
-As a site user i want to be able to:
+## As a site user i want to be able to:
 
-- Register as a user
-- Login to the blog
-- Logout of the blog
-- Change my password
-- View posts
-- Comment posts
+## Account
+
+- As a Site User I can register an account
+- As a registered Site User I can login to my account
+- As a registered Site User I can logout of my account
+- As a registered Site User I can change my password
+- As a registered Site User I can delete my account
+
+## Interaction
+- As a non registered Site User I can view a list of posts
+- As a Site User I can view a paginated list of posts
+- As a registered Site User I can click on a post so that i can read the full text
+- As a registered Site User I can view comments on posts
+- As a registered Site User I can leave comments on a post
+- As a registered Site User I can edit my comments
+- As a registered Site User I can delete my comments
+- As a registered Site user I can like a post
+- As a registered Site User I can unlike a post
+
+## As a site admin i want to be able to:
+- As a Site Admin I can leave comments on a posts through the admin page.
+- As a Site Admin I can create, read, update and delete posts so that I can manage my blog content
+- As a site Admin i can create drafts posts so that i can finish writing the content later
+- As a site Admin I can edit everyones comments through the admin page.
+- As a site Admin I can delete everyones comments through the admin page.
+
 
 <p>&nbsp;</p>
 
