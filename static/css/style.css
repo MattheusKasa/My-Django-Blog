@@ -17,9 +17,13 @@ footer {
     position: relative;
 }
 
+.mobile-dropdown {
+    width: 100%;
+}
+
 .travel-icon {
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 150px;
+    max-width: 150px;
     margin: 0 auto auto 0;
     padding: 0;
     height: 100%;
@@ -113,7 +117,7 @@ a:hover {
 }
 
 .navbar {
-    background-color: #fdfdfd;
+    
 }
 
 .profile-text {
@@ -132,10 +136,6 @@ a:hover {
 
 #dropdownMenuLink:hover {
     color: #040404;
-}
-
-.post-title {
-    color: red;
 }
 
 .card-title {

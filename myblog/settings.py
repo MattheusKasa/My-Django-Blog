@@ -147,5 +147,3 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-import mimetypes
-mimetypes.add_type("text/html", ".css", True)
