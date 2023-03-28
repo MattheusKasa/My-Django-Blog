@@ -188,4 +188,15 @@ a:hover {
     outline: none;
     box-shadow: none;
 }
-  
+
+.profile-delete {
+    color: #E9AE93;
+    font-weight: bold;
+    font-family: "Alkatra";
+}
+
+.cannot-text {
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+}
