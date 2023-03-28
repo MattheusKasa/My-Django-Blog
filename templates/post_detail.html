@@ -11,7 +11,7 @@
         <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
         <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top">
         <p class="card-text ">{{ post.content | safe }}</p>
-        <button id="like-btn" class="btn btn-primary" {% if not user.is_authenticated %}disabled{% endif %}>Like</button>
+        <button id="like-btn" {% if not user.is_authenticated %}disabled{% endif %}><i id="like-icon" class="fas fa-thumbs-up"></i></button>
         <span id="like-count">{{ post.likes.count }}</span> Likes
       </div>
     </div>
@@ -63,28 +63,43 @@
 
 
 {% block extra_js %}
-<!-- Add the JavaScript code here -->
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('#like-btn').addEventListener('click', function () {
-      const postId = {{ post.id }};
+ document.addEventListener('DOMContentLoaded', function () {
+  const postId = {{ post.id }};
+  fetch(`/post/${postId}/is_liked/`, {
+    method: 'GET'
+  })
+  .then(response => response.json())
+  .then(data => {
+    const likeBtn = document.querySelector('#like-btn');
+    const likeIcon = document.querySelector('#like-icon');
+    if (data.liked) {
+      likeIcon.classList.remove('fa-thumbs-up');
+      likeIcon.classList.add('fa-thumbs-down');
+    } else {
+      likeIcon.classList.remove('fa-thumbs-down');
+      likeIcon.classList.add('fa-thumbs-up');
+    }
+    likeBtn.addEventListener('click', function () {
       fetch(`/post/${postId}/like/`, {
         method: 'GET'
       })
       .then(response => response.json())
       .then(data => {
         document.querySelector('#like-count').textContent = data.likes_count;
-        const likeBtn = document.querySelector('#like-btn');
         if (data.liked) {
-          likeBtn.classList.add('btn-danger');
-          likeBtn.classList.remove('btn-primary');
+          likeIcon.classList.remove('fa-thumbs-up');
+          likeIcon.classList.add('fa-thumbs-down');
         } else {
-          likeBtn.classList.add('btn-primary');
-          likeBtn.classList.remove('btn-danger');
+          likeIcon.classList.remove('fa-thumbs-down');
+          likeIcon.classList.add('fa-thumbs-up');
         }
       });
     });
   });
+});
+
+
 </script>
 {% endblock %}
 

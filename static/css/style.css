@@ -173,3 +173,19 @@ a:hover {
     font-weight: bold;
     font-family: "Alkatra";
 }
+
+#like-btn {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+  }
+  
+#like-btn:hover {
+    color: #0056b3;
+}
+
+#like-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+  

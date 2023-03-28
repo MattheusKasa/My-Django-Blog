@@ -157,3 +157,10 @@ def like_post(request, post_id):
     }
 
     return JsonResponse(response_data)
+
+def is_liked(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    liked = False
+    if request.user.is_authenticated:
+        liked = post.likes.filter(id=request.user.id).exists()
+    return JsonResponse({"liked": liked})
