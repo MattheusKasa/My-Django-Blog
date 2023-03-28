@@ -11,23 +11,19 @@ Here's a link to the live website: https://my-django-blog-mattheus.herokuapp.com
 1. [**UX**](#user-experience)
     - [**User Stories**](#user-stories)
     - [**Typography/Color Scheme**](#typographycolor-scheme)
-    - [**Wireframes**](#wireframes)
+    - [**Wireframe**](#wireframe)
 
 2. [**Features**](#features)
     - [**Existing Features**](#existing-features)
-    - [**Features Left to Implement**](#features-not-yet-implemented)
+    - [**Features not yet implemented**](#features-not-yet-implemented)
 
 3. [**Used Programs**](#used-programs)
-    - [**Backend**](#backend)
-    - [**Frontend**](#frontend)
 
-4. [**Testing**](*testing)
+4. [**Testing**](#testing)
 
-5. [**Compatability**](#compatibility)
+5. [**Deployment**](#deployment)
 
-6. [**Deployment**](#deployment)
-
-7. [**Credits**](#credits)
+6. [**Credits**](#credits)
 
 ------
 
@@ -78,11 +74,10 @@ Fonts used on the site are the google fonts [Roboto](https://fonts.google.com/sp
 <p>&nbsp;</p>
 
 
-Options for the user changes depending on if user is logged in or not
-- Users that are **NOT** logged in will be able to:
+- ### Users that are **NOT** logged in will be able to:
     - Register
     - Login
-- Users that **ARE** logged in will be able to:
+- ### Users that **ARE** logged in will be able to:
     - View Posts
     - Like Posts
     - Create Comments
@@ -91,7 +86,7 @@ Options for the user changes depending on if user is logged in or not
     - Change Password
     - Logout
     - Delete Account
-- Admins are able to:
+- ### Admins are able to:
     - View Posts
     - Create Posts
     - Delete Posts
@@ -225,4 +220,7 @@ The project was deployed using both Heroku and GitHub. The following steps were 
 
 ## Credits 
 
-- Countless YouTube videos for inspiration
+- Font awesome for fonts.
+- Code with Stein on Youtube.
+- Code institute Slack Channel
+- Countless other YouTube videos for inspiration
