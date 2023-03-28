@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, HttpResponse, redirect
 from django.views import generic
 from .models import Post, Comment
@@ -5,6 +6,7 @@ from .forms import CommentForm, LoginForm, UserRegistration
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
+
 
 
 # Create your views here.
@@ -135,3 +137,23 @@ def edit_comment(request, comment_id):
         form = CommentForm(instance=comment)
 
     return render(request, 'edit_comment.html', {'form': form, 'comment': comment})
+
+
+
+@login_required
+def like_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    liked = False
+
+    if request.user in post.likes.all():
+        post.likes.remove(request.user)
+    else:
+        post.likes.add(request.user)
+        liked = True
+
+    response_data = {
+        'likes_count': post.likes.count(),
+        'liked': liked
+    }
+
+    return JsonResponse(response_data)
