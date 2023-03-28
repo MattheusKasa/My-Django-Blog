@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'bootstrap4',
     'crispy_bootstrap5',
     'django.contrib.humanize'
+    'cloudinary_storage',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -147,3 +149,22 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Cloudinary settings
+import cloudinary
+import cloudinary_storage
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dsa3o1dbv',
+    'API_KEY': '864289453496321',
+    'API_SECRET': 'lcSRR0sBFCK61igrrBQSubw_1U8'
+}
+
+cloudinary.config(
+    cloud_name=CLOUDINARY_STORAGE['CLOUD_NAME'],
+    api_key=CLOUDINARY_STORAGE['API_KEY'],
+    api_secret=CLOUDINARY_STORAGE['API_SECRET']
+)
+
+# Set default file storage to use Cloudinary
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
