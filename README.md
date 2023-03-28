@@ -8,7 +8,7 @@ Here's a link to the live website: https://my-django-blog-mattheus.herokuapp.com
 
 ---
 ## Table of Contents
-1. [**UX**](#ux)
+1. [**UX**](#user-experience)
     - [**User Stories**](#user-stories)
     - [**Design**](#design)
     - [**Typography/Color Scheme**](#typographycolor-scheme)
@@ -29,10 +29,14 @@ Here's a link to the live website: https://my-django-blog-mattheus.herokuapp.com
 6. [**Deployment**](#deployment)
 
 7. [**Credits**](#credits)
----
-## UX
 
-This is my fourth project in my journey to becoming a software developer. I have chosen to create 'Mattheus Travels", a blog where you can see pictures from places i have been, and read about my experience at theses places.
+------
+
+## User Experience, UX
+
+Those visiting Mattheus Travels are people who enjoy traveling or are interested in learning about new places and cultures.
+
+-----
 
 ## User Stories
 
@@ -45,20 +49,22 @@ As a site user i want to be able to:
 - View posts
 - Comment posts
 
-#### Framework
+<p>&nbsp;</p>
 
-- [Django](https://www.djangoproject.com/)
-    - Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
 
 #### Typography/Color Scheme
 
 Font used on the site are the google font [Roboto](https://fonts.google.com/specimen/Roboto). I chose to keep the color scheme light and easy with different shades of blue for the banners and buttons. The buttons for user management i chose to style grey.
 
-### Wireframes
+<p>&nbsp;</p>
 
-[Balsamic Wireframes](https://balsamiq.com/)
-    - I used this to create all the wireframes for this project
-    - They can be found using this [link](https://github.com/MattheusKasa/My-Django-Blog/tree/master/wireframes)
+### Wireframe
+
+- I used [Balsamic-Wireframes](https://balsamiq.com/) to plan out my project, designing the style that I aimed for.
+- This is what the initial mockup design looked like:
+
+    ![Wireframe](assets/images/wireframe.png)
+
 
 <p>&nbsp;</p>
 
@@ -66,22 +72,31 @@ Font used on the site are the google font [Roboto](https://fonts.google.com/spec
 
 ## Features
 
+<p>&nbsp;</p>
+
 ### Existing Features
 
-**Status-Dependant Navbar**
+<p>&nbsp;</p>
+
 
 Options for the user changes depending on if user is logged in or not
 - Users that are **NOT** logged in will be able to:
-    - Login
     - Register
+    - Login
 - Users that **ARE** logged in will be able to:
-    - Logout
+    - View Posts
+    - Like Posts
+    - Create Comments
+    - Delete Comments
+    - Edit Comments
     - Change Password
-    - See Posts
-    - Comment Posts
+    - Logout
+    - Delete Account
 - Admins are able to:
+    - View Posts
     - Create Posts
     - Delete Posts
+    - Edit Posts
     - Create Comments
     - Delete Comments
     - Edit Comments
@@ -91,43 +106,55 @@ Options for the user changes depending on if user is logged in or not
 
 <p>&nbsp;</p>
 
-**Register**
+- **Status-Dependant Navbar**
 
-Users are able to create their own accounts. The website makes sure that each username is unique and that the password meets all of the requirements.
+    - Navbar changes depending on if the user is logged in or not.
 
-**Login**
+- **Register**
 
-Users are able to login to their accounts. The website makes sure that the username typed in is in the database, and that the password is correct.
+    - Users are able to create their own accounts. The website makes sure that each username is unique and that the password meets all of the requirements.
 
-**Logout**
+- **Login**
 
-Users are able to logout of their accounts and are then redirected to a prompt to login again.
+    - Users are able to login to their accounts. The website makes sure that the username typed in is in the database, and that the password is correct.
 
-**Change Password**
+- **Logout**
 
-Users are able to change their password. They are presented with a form asking for their old password and their new password, aswell as confirming the new one. After they are shown a prompt saying their password has been changed and a button directing them to the home page.
+    - Users are able to logout of their accounts and are then redirected to a prompt to login again.
 
-**Posts**
+- **Change Password**
 
-Users are able to view posts.
+    - Users are able to change their password. They are presented with a form asking for their old password and their new password, aswell as confirming the new one. After they are shown a prompt saying their password has been changed and a button directing them to the home page.
 
-**Comment**
+- **Posts**
 
-Users are able to comment on posts. They are asked to fill out a form with their name, email and comment. After they are returned to the post with a message saying that their comment is awaiting moderation.
+    - Users are able to view posts.
 
-**Pagination**
+- **Comment**
 
-Three posts are displayed on each page to not make the page too flooded with information. Pagination has been added so that the user can easily move through all of the posts.
+    - Users are able to comment on posts. They are also able to edit their comments and delete them.
 
-### Features not yet implemented
+- **Like**
 
-**Edit Comment**
+    - Users are able to like/unlike posts.
 
-Users should be able to edit their comments after they're posted.
 
-**Delete Account**
+- **Pagination**
 
-Users should be able to delete their accounts.
+    - Three posts are displayed on each page to not make the page too flooded with information. Pagination has been added so that the user can easily move through all of the posts.
+
+<p>&nbsp;</p>
+
+## Features not yet implemented
+
+
+- **Search Function**
+
+    - Users will be able to search for specific posts.
+
+- **Dark Mode**
+
+    - Users will be able to toggle between light and dark mode.
 
 <p>&nbsp;</p>
 
