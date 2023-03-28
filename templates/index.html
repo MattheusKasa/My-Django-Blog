@@ -2,7 +2,7 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
-
+{% load humanize %}
 
 <div class="container text-center">
     <div class="row">
@@ -11,7 +11,7 @@
             <div class="card mb-4">
                 <div class="card-body">
                     <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on | naturalday }} </p>
                     {% if post.image %}
                     <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top">
                     {% endif %}
