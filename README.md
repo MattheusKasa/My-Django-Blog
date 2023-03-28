@@ -69,11 +69,11 @@ Fonts used on the site are the google fonts [Roboto](https://fonts.google.com/sp
 
 ---
 
-## Features
+# Features
 
 <p>&nbsp;</p>
 
-### Existing Features
+## Existing Features
 
 <p>&nbsp;</p>
 
@@ -146,6 +146,7 @@ Options for the user changes depending on if user is logged in or not
 
 ## Features not yet implemented
 
+<p>&nbsp;</p>
 
 - **Search Function**
 
@@ -162,55 +163,61 @@ Options for the user changes depending on if user is logged in or not
 ## Used Programs
 - [Gitpod](https://www.gitpod.io/) - An open-source developer platform for remote development used for this project.
 - [Github](https://github.com/) -  A code hosting platform also used in this project
-
-### Backend
-
-- **Heroku**
-    - [Heroku](https://www.heroku.com) - Used for hosting this website
-- **Python**
-    - [Python 3.8.11](https://www.python.org/) - Python is an interpreted, high-level, general-purpose programming language and is the language used for all backend functions of this project.
-- **Django**
-    - [Django 4.1.2](https://www.djangoproject.com/) - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
-- **Gunicorn**
-    - [Gunicorn 20.1.0](https://gunicorn.org/) - Gunicorn is a Python WSGI HTTP Server for UNIX.
-
-### Frontend
-
-- **HTML**
-    - [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - The fundamental code structure for all webpages.
-- **CSS**
-    - [CSS](https://sv.wikipedia.org/wiki/Cascading_Style_Sheets) - A style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+- [Git](https://git-scm.com/) - For version control.
+- [Django](https://www.djangoproject.com/) - I utilized Django to develop this project, a framework based on Python.
+- [Bootstrap](https://getbootstrap.com/) - For HTML design templates.
+- [Balsamiq](https://balsamiq.com/) - For Wireframes.
+- [Heroku](https://www.heroku.com) - Used for hosting this website
+- [Python](https://www.python.org/) - The language used for all backend functions of this project.
+- [Gunicorn 20.1.0](https://gunicorn.org/) - Web Server Gateway Interface used in this project.
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - The fundamental code structure for all webpages.
+- [CSS](https://sv.wikipedia.org/wiki/Cascading_Style_Sheets) - A language for describing document presentation in markup languages like HTML.
+- [W3C](https://www.w3.org/) - For HTML and CSS validation
+- [Pep8CI](https://pep8ci.herokuapp.com/) - For Python validation
 
     <p>&nbsp;</p>
 
 ---
 
 ## Testing
-Testing and results can be found [here](testing.md)
+
+- Testing and results can be found [here](TESTING.md)
+
 ---
 
-## Compatibility
+## Create Repository
 
-The website was tested for full usability across the following browsers:
+The project was deployed using both Heroku and GitHub. The following steps were taken to create the project with GitHub:
 
-- Chrome
-- Firefox
-- Safari
-- Samsung Internet Browser
+1. Logged into GitHub.
+2. Navigated to the 'repositories' section.
+3. Clicked the 'new' button to create a new repository page.
+4. Selected the CodeInstitute template from the dropdown menu.
+5. Assigned a title to my project and clicked 'create repository'.
+6. Once the repository was created, I opened it and clicked the green 'GitPod' button to set up my workspace.
 
-<p>&nbsp;</p>
 
 ---
 
 ## Deployment
 
-To deploy this project to Heroku you must do the following:
+### To deploy the project with Heroku, follow these steps:
 
-1. Create a **requirements.txt** file for heroku to install the requirements for the website.
-
-2. Create a **Procfile** for Heroku to know what type of application to run and how to run it.
-
-3. Log in to Heroku then create your new app. Click on **Deploy** then scroll down to deployment method. Select **GitHub** as deployment method, scroll down and choose branch then click on **Deploy Branch**. You can also choose to **Enable Automatic Deploys**, which will update your app on heroku everyone you update it on your github pages.
+1. Log in to Heroku.
+2. From the main Heroku dashboard, select 'new' and 'create new app'.
+3. Choose a unique name for your project and select a suitable region. Click 'create app' to create the app in Heroku.
+4. From the 'deploy' tab, navigate to the 'resources' tab in the menu at the top.
+5. Add the Heroku Postgres database to your app by going to the add-ons section and searching for 'Heroku Postgres'. Select the package that appears and add it to the database.
+6. In the settings, under 'config vars', add the DATABASE_URL to the clipboard for the Django config.
+7. Create a new file called env.py in GitPod, set your environment table for the DATABASE_URL, and paste in the copied address from Heroku.
+8. Add 'KEY - DISABLE_COLLECTSTATIC' with the value of 1 to the config vars in Heroku. This line must be removed before final deployment of the project.
+9. Add the STATIC files to your settings.py file, including the url, storage path, directory path, root path, media url, and the default file storage path.
+10. Link this to the templates directory in Heroku with 'TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')'.
+11. Add new folders in GitPod for media, static, and templates, and create a file at the top level named Procfile (note the capital P).
+12. In the Procfile, add the following line: web: guincorn "NAME OF YOUR PROJECT".wsgi.
+13. Commit and push these changes to GitHub.
+14. In Heroku, go to the deployment tab and manually deploy this branch. Heroku will build the app, and you will be able to follow the build process in the window.
+15. When the deployment is successful, you will see the message "Your app was successfully deployed".
 
 <p>&nbsp;</p>
 

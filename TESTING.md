@@ -2,6 +2,7 @@
 
 ## Content
 - [Validators](#validators)
+- [Compatibility]
 - [Bugs](#bugs)
 
 ---
@@ -38,6 +39,17 @@
     ![LighthouseDesktop](assets/images/lighthouse%20mobile.png)
 
     - Performance score low, had issues with large image sizes.
+
+---
+
+## Compatibility
+
+The website was tested for full usability across the following browsers:
+
+- Chrome
+- Firefox
+- Safari
+- Samsung Internet Browser
 
 ---
 
